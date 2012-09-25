@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Subways Sandwitch Configurator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="shake.js"></script>
+    <script>
+
+    function random_choice(arr) {
+      index = Math.floor(Math.random() * arr.length);
+      return arr[index];
+    }
+
+    function random_selection(arr) {
+      mixed = arr.sort(function() { return .5 - Math.random(); }).toString();
+      index = Math.floor(Math.random() * arr.length);
+      return arr.slice(0, index);
+    }
+
+    function write_choice(name, arr) {
+      document.write("<li>" + name + ": " + random_choice(arr) + "</li>");
+    }
+
+    function write_selection(name, arr) {
+      document.write("<li>" + name + ": " + random_selection(arr) + "</li>");
+    }
+
+    base = ["Veggie Delite", "Turkey", "Veggie Patty", "Ham", "Turkey & Ham", "Tuna",
+            "Roasted Chicken Breast", "Turkey, Ham und Bacon Melt",
+            "Chicken Teriyaki", "Italian B.M.T", "Steak & Cheese", "BBQ Rib",
+            "Salami", "Spicy Italian", "Chicken Fajita"];
+
+    bread = ["Honey Oat", "Vollkorn", "Cheese Oregano", "Sesam", "Italian"];
+
+    cheese = ["Schmelzkäse", "Frischkäse", "Monterey Cheddar Käse", "kein Käse"]
+
+    toasted = ["ja", "nein"];
+
+    salad = ["Eisbergsalat", "Tomaten", "Salatgurken", "Gewürzgurken",
+            "Paprika", "Oliven", "Zwiebeln", "Jalapenos"];
+
+    sauce = ["Asiago Caesar", "Sweet Onion", "Honey Mustard", "BBQ-Soße",
+            "Chipotle Southwest", "Lite Mayonaise", "Jogurt", "Hot Sauce", "Essig & Öl",
+            "keine Soße"];
+
+
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    function shakeEventDidOccur () {
+      window.location.reload();
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Subway Configurator</h1>
+    <ul>
+      <script>
+        write_choice("Basis", base);
+        write_choice("Brot", bread);
+        write_choice("Käse", cheese);
+        write_choice("Getostet", toasted);
+        write_selection("Salat", salad);
+        write_choice("Soße", sauce);
+      </script>
+    </ul>
+    <input type="button" value="Refresh" onClick="window.location.reload()">
+  </body>
+</html>
