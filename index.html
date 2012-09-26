@@ -2,6 +2,37 @@
   <head>
     <title>Subways Sandwitch Configurator</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <style type="text/css">
+
+      body {
+        font: bold 16px/20px"Helvetica Neue",Helvetica,Arial,Sans-serif;
+      }
+
+      .btn {
+        float: left;
+        padding: 20px 35px;
+        background: #DD4A38;
+        color: white;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        text-decoration: none;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+      li {
+        padding: 10px 0px 10px 10px;
+        background: #efefef;
+      }
+    </style>
+
     <script src="shake.js"></script>
     <script>
 
@@ -51,17 +82,17 @@
     </script>
   </head>
   <body>
-    <h1>Subway Configurator</h1>
+    <h2>Subway Sandwich Configurator</h2>
     <ul>
       <script>
         write_choice("Basis", base);
         write_choice("Brot", bread);
         write_choice("Käse", cheese);
-        write_choice("Getostet", toasted);
+        write_choice("Getoastet", toasted);
         write_selection("Salat", salad);
         write_choice("Soße", sauce);
       </script>
     </ul>
-    <input type="button" value="Refresh" onClick="window.location.reload()">
+    <a href="#" class="btn" onClick="window.location.reload()">Refresh</a>
   </body>
 </html>
