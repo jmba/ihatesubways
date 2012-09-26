@@ -44,7 +44,7 @@
     function random_selection(arr) {
       mixed = arr.sort(function() { return .5 - Math.random(); }).toString();
       index = Math.floor(Math.random() * arr.length);
-      return arr.slice(0, index);
+      return arr.slice(0, index).join(", ");
     }
 
     function write_choice(name, arr) {
