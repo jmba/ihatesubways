@@ -1,7 +1,7 @@
 ihatesubways
 ============
 
-A Subway sandwich configurator - written in pure Javascript.
+A Subway sandwich generator - written in pure Javascript.
 
 # Seriously?
 
